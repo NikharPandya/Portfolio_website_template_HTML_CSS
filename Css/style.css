@@ -1,4 +1,8 @@
-*,
+* {
+	/*padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+*/}
 *::before,
 *::after {
     box-sizing: border-box;
@@ -47,7 +51,7 @@ body{
 }
 
 section {
-	padding: 5em 2em;
+	padding: 5em 2em;                    
 }
 
 img {
@@ -213,10 +217,29 @@ nav {display: none;}
 	}
 }
 
-div.footer-madeby {
-	color: black;
-	opacity: 0.5;
+
+/* My Skills*/
+
+.my-skill {
+	padding: 0;
+	margin-top: 1em; 
+	box-sizing: border-box;
+	background-color: #FFFFFF;
 }
+
+.inner {
+	padding-top: 20px;
+}
+
+.header{
+	text-align: left;
+	color: #333
+}
+
+.skill-title {
+	margin-top: 1em;
+}
+
 
 
 /* About me */
@@ -233,4 +256,30 @@ div.footer-madeby {
 	}
 
 	
+}
+
+
+/* Footer */
+
+.footer {
+	padding: 5em 2em;
+	background-color: #333;
+
+}
+
+.footer-link {
+	color: #FFFFFF;
+}
+
+.social-list {
+	color: #16e0bd;
+}
+
+.social-list__link {
+	color: #FFFFFF;
+}
+
+p.footer-madeby {
+	color:#16e0bd;
+	text-align: center;
 }
