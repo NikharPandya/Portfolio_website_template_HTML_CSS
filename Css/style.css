@@ -46,6 +46,13 @@ body{
     line-height: 1.6;
 }
 
+p {
+	margin-block-start: 1em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
 section {
 	padding: 5em 2em;                    
 }
@@ -214,13 +221,12 @@ nav {display: none;}
 }
 
 
-/* My Skills*/
+/* My Skills  (WHAT I KNOW)*/
 
 .my-skill {
 	padding: 0;
 	margin-top: 1em; 
 	box-sizing: border-box;
-	background-color: #FFFFFF;
 }
 
 .inner {
@@ -381,49 +387,63 @@ p.skill-text{
 
 
 /* Recent Companies*/
-.work4 h3,
-.work5 h3,
-.work6 h3 {
-	color: var(--clr-accent);
-	text-align: right;
+.my-work {
+	box-sizing: border-box;
+	padding:2em 3em 0 3em;
+
 }
 
 .section__title--work {
 	color: var(--clr-dark);
-	position: relative;
+	text-align: center;
 }
 
 .section__title--work::after {
-    content: '';
+     content: '';
     display: block;
     width: 4em;
-    height: 2px;
-    margin: 0.5em  0.5em;
-    background: var(--clr-dark);
+    height: 3px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-accent);
 }
 
-.services {
-	margin-bottom: 4em;
-}
+.work{
+	position: relative;
 
-.service {
-	max-width: 500px;
-	margin: 0 auto;
 }
 
 
-@media (min-width: 800px) {
-	.services {
-		display: flex;
-		max-width: 1000px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.service + .service {
-		margin-left: 2em;
-	}
+.work-head{
+	background-color:var(--clr-dark);
+	padding-left: 5px;
+	padding-right: 5px;
+	overflow: auto;
+	font-weight: var(--fw-bold);
 }
+
+.recent-head{
+	display:inline;
+	color: var(--clr-accent);
+	font-size: 1.75em;
+}
+
+.recent-date{
+	float: right;
+	display:inline;
+	color: var(--clr-accent);
+}
+
+.works {
+	
+	display: grid;
+	grid-template-columns:  1fr;
+	grid-gap: 1rem;
+	padding: 1rem 80px;
+	font-size: 1rem;
+}
+
+
+
 
 
 /* Footer */
