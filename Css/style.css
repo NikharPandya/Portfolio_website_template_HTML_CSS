@@ -19,7 +19,7 @@
 
 	--fs-h1:3rem;
 	--fs-h2:2.25rem;
-	--fs-h3:1.25rem;
+	--fs-h3:1.5rem;
 	--fs-body:1rem;
 
 	--bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
@@ -30,7 +30,7 @@
 	:root {
 		--fs-h1:4.5rem;
 		--fs-h2:3.75rem;
-		--fs-h3:1.5rem;
+		--fs-h3:1rem;
 		--fs-body:1.125rem;
 	}
 }
@@ -46,11 +46,12 @@ body{
     line-height: 1.6;
 }
 
-p {
-	margin-block-start: 1em;
+h3{
+	margin-block-start: 0em;
     margin-block-end: 0em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    font-weight: bold;
 }
 
 section {
@@ -94,7 +95,7 @@ h1,
 h2,
 h3 {
 	line-height:1;
-	margin: 0; 
+	margin: auto; 
 }
 
 h1 { font-size: var(--fs-h1) }
@@ -129,7 +130,9 @@ h3 { font-size: var(--fs-h3) }
 
 /* Header */
 
-nav {display: none;}
+.logo{
+	
+}
 
 /* Intro Section */
 
@@ -388,8 +391,7 @@ p.skill-text{
 
 /* Recent Companies*/
 .my-work {
-	box-sizing: border-box;
-	padding:2em 3em 0 3em;
+	padding:2em 3em 2em 3em;
 
 }
 
@@ -407,17 +409,23 @@ p.skill-text{
     background: var(--clr-accent);
 }
 
-.work{
-	position: relative;
+.works {
+	
+	display: grid;
+	grid-template-columns:  1fr;
+	grid-gap: 1rem;
+	padding: 1rem 80px;
+}
 
+
+.work{
+	display: grid;
 }
 
 
 .work-head{
 	background-color:var(--clr-dark);
-	padding-left: 5px;
-	padding-right: 5px;
-	overflow: auto;
+	padding: 5px 5px 5px 5px;
 	font-weight: var(--fw-bold);
 }
 
@@ -429,44 +437,67 @@ p.skill-text{
 
 .recent-date{
 	float: right;
-	display:inline;
+	margin: auto;
 	color: var(--clr-accent);
-}
-
-.works {
-	
-	display: grid;
-	grid-template-columns:  1fr;
-	grid-gap: 1rem;
-	padding: 1rem 80px;
-	font-size: 1rem;
+	font-size: 1.75em;
 }
 
 
+@media (max-width: 800px) {
+	.work-head {
+		text-align: center;
+		margin: auto;
+		display:inline-grid;
+	}
+
+	.recent-head{
+		padding-bottom: 0.5em;
+	}
+}
 
 
 
 /* Footer */
 
 .footer {
-	padding: 5em 2em;
-	background-color: #333;
+	 background: #333;
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 2.5em 0;
+    font-size: var(--fs-h3);
+}
 
+.footer a {
+	color: inherit
+}
+
+.footer-link:hover,
+.social-list__link:hover{
+	opacity: .7; 
+}
+
+.footer-link:hover{
+	text-decoration: underline;
 }
 
 .footer-link {
-	color: #FFFFFF;
+	font-weight: var(--fw-bold);
+	text-decoration: none;
 }
 
 .social-list {
-	color: #16e0bd;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	margin: 2em 0 ;
+	padding: 0;
+}
+
+.social-list__item {
+	margin: 0 .5em;
 }
 
 .social-list__link {
-	color: #FFFFFF;
+	padding: .5em;
 }
 
-p.footer-madeby {
-	color:#16e0bd;
-	text-align: center;
-}
