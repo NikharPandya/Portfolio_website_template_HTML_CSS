@@ -16,6 +16,7 @@
 	--clr-light:#fff;
 	--clr-dark:#303030;
 	--clr-accent:#16e0bd;
+	/*--clr-accent:#b30000;*/
 
 	--fs-h1:3rem;
 	--fs-h2:2.25rem;
@@ -36,6 +37,10 @@
 }
 
 /* General styles */
+
+html{
+	scroll-behavior: smooth;
+}
 
 body{
 	background: var(--clr-light);
@@ -88,7 +93,38 @@ strong{font-weight: var(--fw-bold)}
 	transform: scale(1.1);
 }
 
+/*.btun {
+	display: inline-block;
+	padding: .5em 2.5em;
+	background: var(--clr-d);
+	color: var(--clr-dark);
+	text-decoration: none;
+	cursor: pointer;
+	font-size: .8rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: var(--fw-bold);
+	transition: transform 200ms ease-in-out;
+}
 
+.btun:hover {
+	transform: scale(1.1);
+}*/
+
+a.work{
+	color: var(--clr-dark);
+	text-decoration: none;
+	cursor: pointer;
+	font-size: .8rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: var(--fw-bold);
+	transition: transform 200ms ease-in-out
+}
+
+a.work:hover{
+	transform: scale();
+}
 /* Typography */
 
 h1,
@@ -136,7 +172,7 @@ header{
 } 
 
 .logo{
-	max-width: 100px;	
+	max-width: 200px;	
 }
 
 .nav{
@@ -159,15 +195,15 @@ header{
 	height: 100%;
 	flex-direction:column; 
 	justify-content: space-evenly;  
-	align-items: center;
+	align-items: left;
 	margin: 0;
-	padding: 0; 
+	padding-left: 3; 
 }
 
 .nav__link{
 	color: inherit;
 	font-weight: var(--fw-bold);
-	font-size:var(--fs-h2); 
+	font-size:var(--fs-h3); 
 	text-decoration: none;
 }
 
@@ -189,6 +225,27 @@ header{
 	top: 1em;
 	z-index: 1000;
 }
+
+.nav-open .nav {
+	transform: translateX(50%);
+}
+
+.nav-open .nav-toggle {
+	position: fixed;
+}
+
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+
 
 .hamburger {
     display: block;
@@ -508,21 +565,21 @@ p.skill-text{
 
 
 .work-head{
-	background-color:var(--clr-dark);
+	background-color:var(--clr-accent);
 	padding: 5px 5px 5px 5px;
 	font-weight: var(--fw-bold);
 }
 
 .recent-head{
 	display:inline;
-	color: var(--clr-accent);
+	color: var(--clr-dark);
 	font-size: 1.75em;
 }
 
 .recent-date{
 	float: right;
 	margin: auto;
-	color: var(--clr-accent);
+	color: var(--clr-dark);
 	font-size: 1.75em;
 }
 
